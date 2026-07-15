@@ -28,3 +28,9 @@ jobs:
         run: npm run dist
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Passo 5 - Salvar o instalador para download
+        uses: actions/upload-artifact@v4
+        with:
+          name: Instalador-Otimizador
+          path: optimizer-app/dist/*.exe
