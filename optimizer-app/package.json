@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Meu Otimizador de Sistema",
   "main": "main.js",
+  "author": "ruanlucccas75-boop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruanlucccas75-boop/optimizer-app.git"
+  },
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --win"
@@ -12,7 +17,8 @@
     "productName": "Otimizador do Sistema",
     "win": {
       "target": "nsis"
-    }
+    },
+    "publish": null
   },
   "devDependencies": {
     "electron": "^28.0.0",
