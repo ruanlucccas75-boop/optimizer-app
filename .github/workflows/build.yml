@@ -20,9 +20,11 @@ jobs:
           node-version: 20
 
       - name: Passo 3 - Instalar dependencias
+        working-directory: ./optimizer-app
         run: npm install
 
       - name: Passo 4 - Gerar o .exe
+        working-directory: ./optimizer-app
         run: npm run dist
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
