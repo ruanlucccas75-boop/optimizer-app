@@ -1,0 +1,28 @@
+name: Build Electron App
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Passo 1 - Pegar o codigo
+        uses: actions/checkout@v4
+
+      - name: Passo 2 - Instalar o Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Passo 3 - Instalar dependencias
+        run: npm install
+
+      - name: Passo 4 - Gerar o .exe
+        run: npm run dist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
