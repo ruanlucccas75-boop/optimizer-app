@@ -1,32 +1,22 @@
 {
   "name": "optimizer-app",
   "version": "1.0.0",
-  "description": "Optimizer - otimizacao real de PC Windows (startup, disco, energia, drivers, servicos)",
+  "description": "Meu Otimizador de Sistema",
   "main": "main.js",
-  "author": "Voce",
-  "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win"
+    "dist": "electron-builder --win"
   },
   "build": {
-    "appId": "com.optimizer.app",
-    "productName": "Optimizer",
-    "directories": {
-      "output": "dist"
-    },
+    "appId": "com.meuapp.otimizador",
+    "productName": "Otimizador do Sistema",
     "win": {
       "target": "nsis"
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
-    },
-    "files": [
-      "**/*",
-      "!dist/**"
-    ]
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "devDependencies": {
     "electron": "^31.0.0",
